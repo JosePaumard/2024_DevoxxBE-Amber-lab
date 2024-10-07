@@ -30,6 +30,7 @@ public class FlightMonitoring {
         FlightConsumer flightConsumer = price -> {
             switch(flight) {
                 case SimpleFlight(SimpleFlightID id, City _, City _) -> SimpleFlight.updatePrice(id, price);
+                case MultilegFlight(MultilegFlightID id, City _, City _, City _) -> MultilegFlight.updatePrice(id, price);
             }
         };
         priceMonitoringService.followPrice(flightID, flightConsumer);

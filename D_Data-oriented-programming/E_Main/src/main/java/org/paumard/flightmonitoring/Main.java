@@ -1,6 +1,7 @@
 package org.paumard.flightmonitoring;
 
 import org.paumard.flightmonitoring.business.FlightMonitoring;
+import org.paumard.flightmonitoring.business.model.MultilegFlightID;
 import org.paumard.flightmonitoring.business.model.SimpleFlightID;
 import org.paumard.flightmonitoring.business.service.DBService;
 import org.paumard.flightmonitoring.business.service.FlightGUIService;
@@ -27,8 +28,8 @@ public class Main {
 
         var f1 = new SimpleFlightID("PaAt");
         var f2 = new SimpleFlightID("AmNY");
-        var f3 = new SimpleFlightID("LoMi");
-        var f4 = new SimpleFlightID("FrWa");
+        var f3 = new MultilegFlightID("LoPaMi");
+        var f4 = new MultilegFlightID("FrLoWa");
 
         flightMonitoring.followFlight(f1);
         flightMonitoring.followFlight(f2);
