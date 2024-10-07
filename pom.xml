@@ -5,13 +5,38 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.paumard</groupId>
-    <artifactId>2024_DevoxxBE-Amber-lab</artifactId>
+    <artifactId>2024_DevoxxBE-DOP-Amber-lab</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>A_Text-blocks</module>
+        <module>B_Records</module>
+        <module>C_Pattern-matching</module>
+        <module>D_Data-oriented-programming</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>23</maven.compiler.source>
         <maven.compiler.target>23</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.8.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.22.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 </project>
