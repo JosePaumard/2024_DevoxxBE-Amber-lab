@@ -1,13 +1,13 @@
 package org.paumard.flightmonitoring.db.model;
 
-public class FlightEntity {
-    private FlightPK id;
+public class SimpleFlightEntity {
+    private SimpleFlightPK id;
     private CityEntity from;
     private CityEntity to;
     private PriceEntity price;
     private PlaneEntity plane;
 
-    public FlightEntity(FlightPK id, CityEntity from, CityEntity to, PriceEntity price, PlaneEntity plane) {
+    public SimpleFlightEntity(SimpleFlightPK id, CityEntity from, CityEntity to, PriceEntity price, PlaneEntity plane) {
         this.id = id;
         this.from = from;
         this.to = to;
@@ -15,7 +15,7 @@ public class FlightEntity {
         this.plane = plane;
     }
 
-    public FlightPK id() {
+    public SimpleFlightPK id() {
         return this.id;
     }
 

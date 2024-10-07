@@ -1,7 +1,6 @@
 package org.paumard.flightmonitoring.business;
 
-import org.paumard.flightmonitoring.business.model.Flight;
-import org.paumard.flightmonitoring.business.model.FlightID;
+import org.paumard.flightmonitoring.business.model.*;
 import org.paumard.flightmonitoring.business.service.DBService;
 import org.paumard.flightmonitoring.business.service.FlightConsumer;
 import org.paumard.flightmonitoring.business.service.FlightGUIService;
@@ -28,7 +27,11 @@ public class FlightMonitoring {
 
     public void followFlight(FlightID flightID) {
         var flight = dbService.fetchFlight(flightID);
-        FlightConsumer flightConsumer = price -> flight.updatePrice(price);
+        FlightConsumer flightConsumer = price -> {
+            switch(flight) {
+                case SimpleFlight(SimpleFlightID id, City _, City _) -> SimpleFlight.updatePrice(id, price);
+            }
+        };
         priceMonitoringService.followPrice(flightID, flightConsumer);
     }
 
