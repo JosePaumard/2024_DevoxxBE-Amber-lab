@@ -21,7 +21,7 @@
     <dependencies>
         <dependency>
             <groupId>org.paumard</groupId>
-            <artifactId>A_Database</artifactId>
+            <artifactId>D_Flight-business-process</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
