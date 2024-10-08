@@ -15,7 +15,7 @@ Each part is implemented in its own module, so that you can follow one or the ot
 
 ## Prerequisites
 
-The features showcased in this lab work on JDK 21+, but for compatibility reasons with the `pom.xml` setup within each part,
+The features showcased in this lab work on JDK 22+, but for compatibility reasons with the `pom.xml` setup within each part,
 we recommend installing the latest JDK version, JDK 23.
 
 If you do not have JDK 23 locally, you may choose to install it through your IDE or from https://jdk.java.net/23/.
