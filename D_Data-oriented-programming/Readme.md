@@ -465,7 +465,7 @@ public sealed interface FlightID
 public record SimpleFlightID(String id) 
         implements FlightID {
 
-    public SimpleFlight {
+    public SimpleFlightID {
         Objects.requireNonNull(id);
     }
 }
@@ -501,7 +501,7 @@ public void displayFlight(Flight flight) {
     switch(flight) {
         case SimpleFlight(City from, City to) -> System.out.println(
                 "Flight from " + from.name() + " to " + to.name() +
-                ": price is now " + simpleFlight.price().price());
+                ": price is now " + ((SimpleFlight)flight).price().price());
     };
 }
 ```
@@ -528,8 +528,8 @@ record SimpleFlight(SimpleFlightID id, City from, City to) {}
 private static final Map<SimpleFlightID, Price> pricePerFlight
         = new ConcurrentHashMap<>();
 
-public static Price price(SimpleFlight flightEntity) {
-    return pricePerFlight.get(flightEntity.id());
+public static Price price(SimpleFlightID id) {
+    return pricePerFlight.get(id);
 }
 
 public static void updatePrice(SimpleFlightID id, Price price) {

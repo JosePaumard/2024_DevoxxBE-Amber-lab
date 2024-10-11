@@ -124,7 +124,7 @@ public class E_ChallengeRecord {
         assertThat(city.name()).isEqualTo("Atlanta");
         assertThat(city.state().name()).isEqualTo("Georgia");
         assertThat(city.population().amount()).isEqualTo(506_811);
-        assertThat(city.landArea().amount()).isCloseTo(3458d, Offset.offset(0.001));
+        assertThat(city.landArea().amount()).isCloseTo(345.8d, Offset.offset(0.001));
     }
     // Hint:
     // <editor-fold defaultstate="collapsed">
